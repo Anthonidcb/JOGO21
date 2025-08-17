@@ -1,5 +1,5 @@
 package com.anthoni;
 
-public class Naipe {
-    OUROS, PAUS, ESPADAS, COPAS;    
+public enum Naipe {
+    OUROS, PAUS, ESPADAS, COPAS;
 }

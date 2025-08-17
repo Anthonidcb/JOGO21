@@ -3,11 +3,10 @@ package com.anthoni;
 public class Carta {
     private ValorCarta valor;
     private Naipe naipe;
-    
-    public Carta(int numero, Naipe naipe) {
-        this.numero = numero;
-        this.naipe = naipe;
 
+    public Carta(ValorCarta valor, Naipe naipe) {
+        this.valor = valor;
+        this.naipe = naipe;
     }
 
     public ValorCarta getValor() {
@@ -18,9 +17,8 @@ public class Carta {
         return naipe;
     }
 
-        @Override
+    @Override
     public String toString() {
-        return "Carta [numero=" + valor + ", naipe=" + naipe + "]";
+        return "Carta [valor=" + valor + ", naipe=" + naipe + "]";
     }
-
 }

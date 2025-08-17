@@ -1,20 +1,24 @@
 package com.anthoni;
 
-public class App{
+public class App {
     public static void main(String[] args) {
-       Baralho baralho = new Baralho();
+        Baralho baralho = new Baralho();
+        baralho.embaralho();
 
-       while(!baralho.vazio()){
-        Carta c = baralho.pegaDeCIma();
-        System.out.println(c.ToString)
-       }
-       System.out.println(c.ToString());
-/*
-       int[] valores = new int[3];
-       valores[0] = 10;
-       valores[1] = 20;
-       valores[2] = 30;
+        while (!baralho.vazio()) {
+            Carta c = baralho.pegaDeCima();
+            System.out.println(c.toString());
+        }
+
+        baralho = new Baralho();
+        baralho.embaralho();
+        Deck deck = new Deck();
+
+        while (!baralho.vazio()) {
+            deck.insereEmbaixo(baralho.pegaDeCima());
+        }
+
+        System.out.println(deck);
+        System.out.println("Somatório das cartas: " + deck.somatorio());
     }
-*\
-
 }

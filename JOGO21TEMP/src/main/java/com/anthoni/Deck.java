@@ -1,19 +1,41 @@
 package com.anthoni;
 
-public carta pegaDeCima{
-    return null;
-}
+import java.util.ArrayList;
 
-public void insereEmbaixo(Carta carta){
+public class Deck {
+    private ArrayList<Carta> cartas;
 
-}
+    public Deck() {
+        cartas = new ArrayList<>();
+    }
 
-public int somatorio(){
-    return 0;
-}
+    public Carta pegaDeCima() {
+        if (cartas.isEmpty()) {
+            throw new IllegalStateException("Deck vazio");
+        }
+        return cartas.remove(0);
+    }
 
-Public String toString(){
-    //devolve uma tring com as cartas que estão no deck
+    public void insereEmbaixo(Carta carta) {
+        cartas.add(carta);
+    }
+
+    public int somatorio() {
+        int soma = 0;
+        for (Carta c : cartas) {
+            soma += c.getValor().ordinal() + 1;
+        }
+        return soma;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder("Deck:\n");
+        for (Carta c : cartas) {
+            sb.append(c.toString()).append("\n");
+        }
+        return sb.toString();
+    }
 }
 
 
